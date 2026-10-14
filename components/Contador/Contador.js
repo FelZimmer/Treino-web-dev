@@ -10,6 +10,7 @@ export default function Contador(){
         document.title = `Você clicou ${count} vezes`;
     }
     , [count])
+    
     return (
         <>
     <h2>Contador{count}</h2>

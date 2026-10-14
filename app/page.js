@@ -22,6 +22,10 @@ export default function Home() {
     };
     setNotas((prev) => [...prev, nova])
   }
+
+  function excluirNota(id){
+    setNotas((prev) => prev.filter((nota) => nota.id != id))
+  }
  
   
   return (
@@ -32,7 +36,7 @@ export default function Home() {
     <h1>Minhas anotacoes</h1>
       <Formulario onAdicionar={addNotas}></Formulario>
     <p>total de notas:{notas.lenght}</p>
-    <ListaNotas notas = {notas}></ListaNotas>
+    <ListaNotas notas = {notas} onDeletar={excluirNota}></ListaNotas>
 
 
       
